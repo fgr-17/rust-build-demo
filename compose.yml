@@ -1,0 +1,16 @@
+services:
+  rust-template:
+    container_name: rust-template
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        PROJECT_NAME: ${PROJECT_NAME:-hello}
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    environment:
+      - PROJECT_NAME=${PROJECT_NAME:-hello}
+    stdin_open: true
+    tty: true
+    restart: no
