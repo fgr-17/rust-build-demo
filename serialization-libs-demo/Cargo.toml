@@ -1,0 +1,21 @@
+[package]
+name = "serialization-libs-demo"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+colored = "3.0.0"
+flatbuffers = "25.9.23"
+prost = "0.14.1"
+
+[dev-dependencies]
+mockall = "0.13.1"
+
+[build-dependencies]
+glob = "0.3.3"
+prost = "0.14.1"
+prost-build = "0.14.1"
+dotenvy = "0.15.7"
+anyhow = "1.0.100"
+flatbuffers = "25.9.23"
+flatc-rust = "0.2.0"

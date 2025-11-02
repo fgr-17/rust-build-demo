@@ -1,0 +1,29 @@
+namespace example;
+
+file_identifier "FLTB";
+
+table ComplexNumber {
+    re:float;
+    im:float;
+}
+
+table IntValue {
+    value:int;
+}
+
+table FloatValue {
+    value:float;
+}
+
+union Data {
+    IntValue,
+    FloatValue,
+    ComplexNumber
+}
+
+table Message {
+    data:Data;
+    timestamp:ulong;
+}
+
+root_type Message;

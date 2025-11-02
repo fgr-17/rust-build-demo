@@ -1,16 +1,16 @@
 services:
-  rust-template:
-    container_name: rust-template
+  serialization-libs-demo:
+    container_name: serialization-libs-demo
     build:
       context: .
       dockerfile: Dockerfile
       args:
-        PROJECT_NAME: ${PROJECT_NAME:-hello}
+        PROJECT_NAME: ${PROJECT_NAME:-serialization-libs-demo}
     volumes:
       - .:/workspace
     working_dir: /workspace
     environment:
-      - PROJECT_NAME=${PROJECT_NAME:-hello}
+      - PROJECT_NAME=${PROJECT_NAME:-serialization-libs-demo}
     stdin_open: true
     tty: true
     restart: no

@@ -7,7 +7,7 @@ ENV SCRIPTS_DIR=./scripts
 
 # to run mockall
 RUN apk add --no-cache musl-dev
-RUN apk add make
+RUN apk add make protoc flatc
 
 RUN rustup update && rustup component add clippy rustfmt llvm-tools
 RUN cargo install cargo-llvm-cov --locked
